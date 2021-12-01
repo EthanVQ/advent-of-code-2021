@@ -1,0 +1,12 @@
+/Users/ethanjones/Documents/Advent of Code/2021/bin/Debug/netcoreapp3.1/2021.deps.json
+/Users/ethanjones/Documents/Advent of Code/2021/bin/Debug/netcoreapp3.1/2021.runtimeconfig.json
+/Users/ethanjones/Documents/Advent of Code/2021/bin/Debug/netcoreapp3.1/2021.runtimeconfig.dev.json
+/Users/ethanjones/Documents/Advent of Code/2021/bin/Debug/netcoreapp3.1/2021.dll
+/Users/ethanjones/Documents/Advent of Code/2021/bin/Debug/netcoreapp3.1/2021.pdb
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.csprojAssemblyReference.cache
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.AssemblyInfoInputs.cache
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.AssemblyInfo.cs
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.csproj.CoreCompileInputs.cache
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.dll
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.pdb
+/Users/ethanjones/Documents/Advent of Code/2021/obj/Debug/netcoreapp3.1/2021.genruntimeconfig.cache
