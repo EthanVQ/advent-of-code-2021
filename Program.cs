@@ -17,6 +17,19 @@ namespace _2021
             Console.WriteLine("Day 3:");
             run_3.run_part_1();
             run_3.run_part_2();
+
+            Console.WriteLine("Day 4:");
+            run_4.run_part_1();
+            run_4.run_part_2();
+
+            Console.WriteLine("Day 5:");
+            run_5.run_part_1();
+            run_5.run_part_2();
+
+            Console.WriteLine("Day 6:");
+            run_6.run_part_1();
+            run_6.run_part_2();
+
         }
     }
 }

@@ -124,7 +124,7 @@ namespace _2021
                 else 
                 {
                     Console.WriteLine("No criteria selected.");
-                    return;
+                    return 0;
                 }
                 
                 // remove rows
