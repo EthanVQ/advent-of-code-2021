@@ -30,6 +30,10 @@ namespace _2021
             run_6.run_part_1();
             run_6.run_part_2();
 
+            Console.WriteLine("Day 7:");
+            run_7.run_part_1();
+            run_7.run_part_2();
+
         }
     }
 }
