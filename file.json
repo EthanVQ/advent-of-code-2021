@@ -1,0 +1,137 @@
+{
+    $schema: https://vega.github.io/schema/vega/v5.json
+    config: {
+      kibana: {
+        restoreSignalValuesOnRefresh: true
+        controlsLocation: right
+      }
+    }
+    data: [
+      {
+        name: data
+        values: [
+          {
+            first_name: john
+            middle_name: cleese
+            last_name: jones
+          }
+          {
+            first_name: brian
+            middle_name: james
+            last_name: jones
+          }
+          {
+            first_name: john
+            middle_name: mark
+            last_name: tim
+          }
+          {
+            first_name: tom
+            middle_name: long middle name
+            last_name: tim
+          }
+          {
+            first_name: adam
+            middle_name: ewan
+            last_name: long surname
+          }
+        ]
+        transform: [
+          {
+            type: formula
+            expr: if(selector=="first_name", datum.first_name, if(selector=="middle_name", datum.middle_name, if(selector=="last_name", datum.last_name, false)))
+            as: var
+          }
+          {
+            type: aggregate
+            groupby: [
+              var
+            ]
+            ops: [
+              count
+            ]
+            as: [
+              doc_count
+            ]
+          }
+        ]
+      }
+    ]
+    signals: [
+      {
+        name: selector
+        value: first_name
+        bind: {
+          input: select
+          options: [
+            first_name
+            middle_name
+            last_name
+          ]
+        }
+      }
+      {
+        name: width
+        update: width-120
+      }
+    ]
+    scales: [
+      {
+        name: x
+        type: band
+        range: height
+        padding: 0.05
+        domain: {
+          data: data
+          field: var
+        }
+      }
+      {
+        name: y
+        type: linear
+        range: width
+        domain: {
+          data: data
+          field: doc_count
+        }
+      }
+    ]
+    axes: [
+      {
+        orient: left
+        scale: x
+      }
+      {
+        orient: bottom
+        scale: y
+      }
+    ]
+    marks: [
+      {
+        type: rect
+        from: {
+          data: data
+        }
+        encode: {
+          update: {
+            y: {
+              field: var
+              scale: x
+            }
+            x: {
+              field: doc_count
+              scale: y
+            }
+            height: {
+              scale: x
+              band: 1
+            }
+            x2: {
+              scale: y
+              value: 0
+            }
+          }
+        }
+      }
+    ]
+  }
